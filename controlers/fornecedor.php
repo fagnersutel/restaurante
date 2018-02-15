@@ -46,7 +46,7 @@ switch ($acao){
         try {
             $for = new Fornecedor($db, $codigoIten, $um, $dois, $tres, $nomeItem4, $nomeItem5, $nomeItem6, $nomeItem7, $nomeItem8, $nomeItem9, $nomeItem10);
             $for->listarFornecedores();
-            //header('location: fornecedorteste.php'); 
+            header('location: fornecedores.php'); 
             //echo 'acao 2';
         } catch (Exception $exc) {
             header('location: principal.php?pag=falha.php&erro='.$exc->getTraceAsString());

@@ -1,16 +1,5 @@
 <?php
 $paph = "../../transparencia/";
-if (include_once '../Classes/dbconfig.php')
-{
-    $db = $DB_con;
-    $chave = $_GET['chave'];
-}
-else
-{
-    echo 'Conexão não estabelecida....';
-}
-include_once '../Classes/IcsProf.class.php';
-$ics = new IcsProf($db, $id, $nome, $dtini, $dtfim, $bolsa, $projeto, $orientador);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +10,7 @@ $ics = new IcsProf($db, $id, $nome, $dtini, $dtfim, $bolsa, $projeto, $orientado
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>DataTables</title>
+        <title>Include</title>
 
         <!-- Bootstrap -->
         <link href="<?php echo $paph; ?>vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -99,7 +88,7 @@ include_once './top_nav.php';
                     <div class="">
                         <div class="page-title">
                             <div class="title_left">
-                                <h3>Alunos <small>de Iniciação Científica</small></h3>
+                                <h3>Fornecedores <small>Cadastrados</small></h3>
                             </div>                           
                         </div>
 
