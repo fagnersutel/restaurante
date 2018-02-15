@@ -30,7 +30,7 @@
             <li><a><i class="fa fa-edit"></i>Insumos <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="insumo.php">Cadastrar Insumo</a></li>
-                    <li><a href="#">Listar Insumos</a></li>
+                    <li><a href="insumos.php?acao=2">Listar Insumos</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-edit"></i> Fornecedores<span class="fa fa-chevron-down"></span></a>

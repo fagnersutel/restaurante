@@ -6,10 +6,11 @@ switch ($acao){
     
     case 0: 
         try {
+            
             $codigoIten     = utf8_decode($_POST['$codigoIten']);
-            $um     = utf8_decode($_POST['razaosocial']);
-            $dois   = utf8_decode($_POST['cpfcnpj']);
-            $tres   = utf8_decode($_POST['codigocidade']);
+            $um     = utf8_decode($_POST['insumo']);
+            $dois   = utf8_decode($_POST['codunid']);
+            $tres   = utf8_decode($_POST['tres']);
             $quatro = utf8_decode($_POST['quatro']);
             $cinco  = utf8_decode($_POST['cinco']);
             $seis   = utf8_decode($_POST['seis']);
@@ -18,11 +19,11 @@ switch ($acao){
             $nove   = utf8_decode($_POST['nove']);
             $dez   = utf8_decode($_POST['dez']);
             
+            $for = new Insumo($db, $codigoIten, $um, $dois, $tres, $nomeItem4, $nomeItem5, $nomeItem6, $nomeItem7, $nomeItem8, $nomeItem9, $nomeItem10);
             
-;            $for = new Insumo($db, $codigoIten, $um, $dois, $tres, $nomeItem4, $nomeItem5, $nomeItem6, $nomeItem7, $nomeItem8, $nomeItem9, $nomeItem10);
-            //echo $fab->inserirEnderecos($um, $dois, $tres, $quatro, $id, $nm, $cl, $tp, $tb);
             $for->incluirInsumo();
             $inserido = $for->getcodigoIten();
+            
         } catch (Exception $exc) {
             header('location: principal.php?pag=falha.php&erro='.$exc->getTraceAsString());
         } 

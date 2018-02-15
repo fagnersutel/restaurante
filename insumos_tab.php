@@ -134,11 +134,10 @@ $size = count($_SESSION['idproduto']);
                                             <thead>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Razão Social</th>
-                                                    <th>CNPJ</th>
-                                                    <th>Cod Cidade</th>
-                                                    <th>Cidade</th>
-                                                    <th>Estado</th>
+                                                    <th>Insumo Social</th>
+                                                    <th>Codigo Unid. Medida</th>
+                                                    <th>Unidade de Medida</th>
+                                                    <th>Abrev. Unid. MEd.</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

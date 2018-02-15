@@ -162,7 +162,7 @@ class Insumo {
         //return "INSERT INTO produto(produto_desc, produto_cnpj, Cidade_idCidade, produto_data) VALUES('" . $this->getNomeItem1() . "', '" . $this->getNomeItem2() . "', " . $this->getNomeItem3() . ", '" . date("Y-m-d H:i:s") . "')";
         //return $this->db;
         try {
-            $stmt = $this->db->prepare('INSERT INTO produto(produto_desc, produto_cnpj, unidade_de_medida_idunidade_de_medida) VALUES(?, ?)');
+            $stmt = $this->db->prepare('INSERT INTO produto(produto_desc, unidade_de_medida_idunidade_de_medida) VALUES(?, ?)');
             $stmt->bindValue(1, $this->getNomeItem1());
             $stmt->bindValue(2, $this->getNomeItem2());
             #$stmt->bindValue(4, date("Y-m-d H:i:s"));
@@ -207,9 +207,9 @@ class Insumo {
     public function listarInsumos()
     {
 
-        $stmt = $this->db->prepare('SELECT * FROM produto p, unidade_de_medida um  WHERE p.unidade_de_medida_idunidade_de_medida = um.idunidade_de_medida');
+        $stmt = $this->db->prepare('SELECT * FROM produto p, unidade_de_medida um  WHERE p.unidade_de_medida_idunidade_de_medida = um.idunidade_de_medida ORDER BY produto_desc');
         $stmt->execute();
-        $stmt->bindColumn('idproduto', $id);
+        $stmt->bindColumn('idproduto', $iditem);
         $stmt->bindColumn('produto_desc', $txt1);
         $stmt->bindColumn('unidade_de_medida_idunidade_de_medida', $txt2);
         $stmt->bindColumn('unidade_de_medida_desc', $txt3);

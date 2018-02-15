@@ -193,7 +193,7 @@ echo $iditem = $_SESSION['iditem'];
                                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nome do Insumo <span class="required">*</span>
                                                 </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" id="first-name" name="razaosocial" required="required"  class="form-control col-md-7 col-xs-12" <?php echo "value=\"".$nome."\""; ?> />
+                                                    <input type="text" id="first-name" name="insumo" required="required"  class="form-control col-md-7 col-xs-12" <?php echo "value=\"".$nome."\""; ?> />
                                                     <input type="hidden" id="" name="codigoIten"   class="form-control col-md-7 col-xs-12" value="<?php echo $iditem; ?>">
                                                     
                                                 </div>
@@ -201,7 +201,7 @@ echo $iditem = $_SESSION['iditem'];
                                             <div class="form-group">
                                                 <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Unidade de Medida*</label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" id="sinal_autocomplete2" name="cidade" autocomplete="off" class="form-control col-md-7 col-xs-12" required="required"  name="tituloPeriodico" autocomplete="off" value="<?php echo $_SESSION['txt4']; ?>">
+                                                    <input type="text" id="sinal_autocomplete2" name="" autocomplete="off" class="form-control col-md-7 col-xs-12" required="required"  name="tituloPeriodico" autocomplete="off" value="<?php echo $_SESSION['txt4']; ?>">
 
                                                 </div>
                                             </div>
@@ -209,8 +209,8 @@ echo $iditem = $_SESSION['iditem'];
                                             <div class="form-group">
                                                 <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Abreviatura </label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" name="estado" id="estado" class="form-control col-md-7 col-xs-12" disabled="disabled" value="<?php echo $_SESSION['txt5']; ?>">
-                                                    <input type="hidden" name="codigocidade"  id="codigocidade" class="form-control col-md-7 col-xs-12"  value="<?php echo $_SESSION['txt3']; ?>"/>
+                                                    <input type="text" name="" id="estado" class="form-control col-md-7 col-xs-12" disabled="disabled" value="<?php echo $_SESSION['txt5']; ?>">
+                                                    <input type="hidden" name="codunid"  id="codigocidade" class="form-control col-md-7 col-xs-12"  value="<?php echo $_SESSION['txt3']; ?>"/>
 
                                                 </div>
                                             </div>
