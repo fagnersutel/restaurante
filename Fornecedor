@@ -1,0 +1,817 @@
+<?phpclass Fornecedor {
+     private $db;
+    private $codigoIten;
+    private $nomeItem1;
+    private $nomeItem2;
+    private $nomeItem3;
+    private $nomeItem4;
+    private $nomeItem5;
+    private $nomeItem6;
+    private $nomeItem7;
+    private $nomeItem8;
+    private $nomeItem9;
+    private $nomeItem10;
+
+    public function __construct($db, $codigoIten, $nomeItem1, $nomeItem2, $nomeItem3, $nomeItem4, $nomeItem5, $nomeItem6, $nomeItem7, $nomeItem8, $nomeItem9, $nomeItem10)
+    {
+        $this->db = $db;
+        $this->codigoIten = $codigoIten;
+        $this->nomeItem1 = $nomeItem1;
+        $this->nomeItem2 = $nomeItem2;
+        $this->nomeItem3 = $nomeItem3;
+        $this->nomeItem4 = $nomeItem4;
+        $this->nomeItem5 = $nomeItem5;
+        $this->nomeItem6 = $nomeItem6;
+        $this->nomeItem7 = $nomeItem7;
+        $this->nomeItem8 = $nomeItem8;
+        $this->nomeItem9 = $nomeItem9;
+        $this->nomeItem10 = $nomeItem10;
+    }
+
+    // GET & SET
+    public function getcodigoIten()
+    { //codigoIten
+        return $this->codigoIten;    // $this quer dizer que o campo codigoIten reside [ou est�] na mema classeem que o campo est� acessado.
+    }
+
+    public function setcodigoIten($codigoIten)
+    { //codigoIten
+        $this->codigoIten = $codigoIten;
+    }
+
+    // GET & SET
+    public function getNomeItem1()
+    { // pega o valor do atributo do objeto em que a fun��o est� inserida.
+        return $this->nomeItem1;
+    }
+
+    public function setNomeItem1($nomeItem1)
+    { // atribui o valor ao atributo da classe e n�o no banco - ou seja est� operqando apenas na camada l�gica.
+        $this->nomeItem1 = $nomeItem1;
+    }
+
+    // GET & SET
+    public function getNomeItem2()
+    { //nomeItem2
+        return $this->nomeItem2;
+    }
+
+    public function setNomeItem2($nomeItem2)
+    { //nomeItem2
+        $this->nomeItem2 = $nomeItem2;
+    }
+
+    // GET & SET
+    public function getNomeItem3()
+    { //nomeItem3
+        return $this->nomeItem3;
+    }
+
+    public function setNomeItem3($nomeItem3)
+    { //nomeItem3
+        $this->nomeItem3 = $nomeItem3;
+    }
+
+    // GET & SET
+    public function getNomeItem4()
+    { //nomeItem4
+        return $this->nomeItem4;
+    }
+
+    public function setNomeItem4($nomeItem4)
+    { //nomeItem4
+        $this->nomeItem4 = $nomeItem4;
+    }
+
+    // GET & SET
+    public function getNomeItem5()
+    { //nomeItem5
+        return $this->nomeItem5;
+    }
+
+    public function setNomeItem5($nomeItem5)
+    { //nomeItem5
+        $this->nomeItem5 = $nomeItem5;
+    }
+
+    // GET & SET
+    public function getNomeItem6()
+    { //nomeItem6
+        return $this->nomeItem6;
+    }
+
+    public function setNomeItem6($nomeItem6)
+    { //nomeItem6
+        $this->nomeItem6 = $nomeItem6;
+    }
+
+    // GET & SET
+    public function getNomeItem7()
+    { //nomeItem7
+        return $this->nomeItem7;
+    }
+
+    public function setNomeItem7($nomeItem7)
+    { //nomeItem7
+        $this->nomeItem7 = $nomeItem7;
+    }
+
+    // GET & SET
+    public function getNomeItem8()
+    { //nomeItem8
+        return $this->nomeItem8;
+    }
+
+    public function setNomeItem8($nomeItem8)
+    { //nomeItem8
+        $this->nomeItem8 = $nomeItem8;
+    }
+
+    // GET & SET
+    public function getNomeItem9()
+    { //nomeItem9
+        return $this->nomeItem9;
+    }
+
+    public function setNomeItem9($nomeItem9)
+    { //nomeItem9
+        $this->nomeItem9 = $nomeItem9;
+    }
+
+    // GET & SET
+    public function getNomeItem10()
+    { //nomeItem10
+        return $this->nomeItem10;
+    }
+
+    public function setNomeItem10($nomeItem10)
+    { //nomeItem10
+        $this->nomeItem10 = $nomeItem10;
+    }
+
+    
+    public function __destruct()
+    {
+
+    }
+
+    public function incluirFornecedor()
+    {
+       /*
+            try {     
+                
+                $stmt = $this->db->prepare('INSERT INTO pagamentos(zero, um, dois, tres, quatro, cinco, seis, sete, oito, nove, dez) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+                $stmt->bindValue(1, $this->getNomeItem1());
+                $stmt->bindValue(2, $this->getNomeItem2());
+                $stmt->bindValue(3, $this->getNomeItem3());
+                $stmt->bindValue(4, $this->getNomeItem4());
+                $stmt->bindValue(5, $this->getNomeItem5());
+                $stmt->bindValue(6, $this->getNomeItem6());
+                $stmt->bindValue(7, $this->getNomeItem7());
+                $stmt->bindValue(8, $this->getNomeItem8());
+                $stmt->execute();        
+                //$stmt->debugDumpParams();
+                $this->codigoIten = $this->db->lastInsertId();
+            }
+             catch (PDOException $e) {
+               $stmt->rollBack();
+                throw $e;
+                echo 'exceção:' . $e;
+            }*/
+    }
+
+    public function excluirPagamento($codigoIten)
+    {
+        /* 	$queryUser =	"SELECT *, n.descricaoNivel
+          FROM nomeItem3s u, niveis n
+          WHERE u.codigoNivel = n.codigoNivel
+          AND u.nomeUsuario ='" . $this->getNomeItem3() . "';";
+
+          //echo $queryUser;
+
+          $resUser = mysql_query($queryUser);
+
+          $row = mysql_num_rows($resUser);
+
+          // Tirando o while
+          $user = mysql_fetch_array($resUser);
+
+          if (  $user['codigoNivel']!= 4){ //rotina a ser executada ap�s aprovado o if
+          echo $exibe = <<<inicio
+          <center>
+          <img src="images/cone.jpg" width="250" height="150" alt="imag" class="leftalign" />
+          <h2>Voc� n�o possui privil�gios suficentes para esta opera��o</h2></br>
+          <h1>....</h1>
+          </center>
+          inicio;
+          }else{ */
+        try {
+            $stmt = $this->db->prepare('DELETE FROM pagamentos WHERE zero = ?');
+            $stmt->bindValue(1, $codigoIten);
+            $stmt->execute();
+        } catch (PDOException $e) {
+            $erro1 = "<p>PDO::errorCode():". $stmt->errorCode()."</p>";
+            $arr = $stmt->errorInfo(); //print_r($arr);
+            $erro2 = "<p>PDOStatement::errorInfo():" . $arr[1]."</p>";
+            if ($arr[1] == 1451) {
+                echo '<p>O registro não pode ser excluído pois possui registros dependentes.</p>' . $erro1 . " " . $erro2;
+            }
+            $stmt->rollBack();
+            throw $e;
+        }
+        
+        /* 	}
+         */
+    }
+
+    public function listarPagamento()
+    {       
+        //executa consulta no banco de dados para montar a exibição da consulta.
+        $stmt = $this->db->prepare('SELECT * FROM 	pagamentos');
+        $stmt->execute();
+        $stmt->bindColumn('zero', $idfe);
+        $stmt->bindColumn('um', $fe);
+        $stmt->bindColumn('dois', $cpf);
+        $stmt->bindColumn('tres', $dn);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        // monta uma tabela com os valores retornados do result set
+        //echo "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />";
+        echo $ini_listar = <<<ini_listar
+		<article class="module width_3_quarter">
+		<header><h3 class="tabs_involved">Listagem de Pagamentos</h3>
+		</header>
+		<div class="tab_container">
+			<div id="tab1" class="tab_content">
+			<table class="tablesorter" cellspacing="0">
+			<thead>
+				<tr>
+    				<th>Indice</th>
+    				<th>Nome</th>
+    				<th>CPF</th>
+    				<th>DN</th>
+    				<th>E-Mail</th>
+    				<th colspan="3">A&ccedil;&atilde;o</th>
+				</tr>
+			</thead>
+			<tbody>
+ini_listar;
+        $indice = 1;
+        while ($row = $stmt->fetch()){
+            echo "<tr>";    
+                echo "<td > " . $indice . "</td>";
+                    //echo $row[pagamentos_email];
+                    echo "<td><b>" . UTF8_encode($fe) . "</b></td>";
+                    echo "<td><b>" . UTF8_encode($cpf) . "</b></td>";
+                    echo "<td><b>" . UTF8_encode($row[pagamentos_email]) . "</b></td>";
+                    echo "<td ><b>" . implode('/', array_reverse(explode('-', utf8_encode($dn)))) . "</b></td>";
+                    echo "<td ><a href=pagamentos-p.php?acao=1&chave=" . $idfe . "> <img src=\"images/icn_edit.png\"  title=\"Editar registro existente\"   align=\"center\" height=\"16\" width=\"16\" border=\"0\"/></a>&nbsp;&nbsp;<a href=pagamentos-p.php?acao=2&chave=" . $idfe . "> <img src=\"images/icn_trash.png\"  title=\"Excluir registro existente\"   align=\"center\" height=\"16\" width=\"16\" border=\"0\"/></a></td>";
+            echo "</tr>";
+            $indice++;        
+        }
+        echo $fim_listar = <<<fim_listar
+			</tbody>
+			</table>
+			</div><!-- end of #tab1 -->
+fim_listar;
+    }
+
+    public function localizarGalerias($codigoIten)
+    {
+        $query = "SELECT a.codigoIten, a.nomeItem1, a.nomeItem2
+				FROM galerias a
+				WHERE a.codigoIten = " . $codigoIten;
+        //echo $query;
+
+        $res = mysql_query($query) or die(mysql_error());
+        $nr = (int) mysql_num_rows($res); //(   int � um typequest explicito.
+        $row = mysql_fetch_row($res); //vetor
+
+        $this->setcodigoIten($row[0]);
+        $this->setNomeItem1($row[1]);
+        $this->setNomeItem2($row[2]);
+    }
+
+    public function buscar_matric($codigoIten, $turma){
+        $stmt = $this->db->prepare('SELECT * FROM curso LEFT JOIN turmas ON curso_idcurso = idcurso LEFT JOIN matriculas ON turmas_idturmas = idturmas LEFT JOIN pessoa ON pessoa_idpessoa = idpessoa WHERE zero = ?');
+        $stmt->bindValue(1, $codigoIten);
+        $stmt->execute();
+        $stmt->bindColumn('zero', $id);
+        $stmt->bindColumn('um', $txt1);
+        $stmt->bindColumn('dois', $txt2);
+        $stmt->bindColumn('tres', $txt3);
+        $stmt->bindColumn('quatro', $txt4);
+        $stmt->bindColumn('cinco', $txt5);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $pagamentos = $stmt->fetch();
+         echo $ini_listar = <<<ini_listar
+	<div class="clear"></div>
+        <article class="module width_full">
+            <div>
+                <form action="pagamento.php" method="post" enctype="multipart/form-data">
+                    <div class="module_content">
+                        <fieldset>
+                            <label>Pagamento</label>
+                        </fieldset>
+ini_listar;
+        echo "<fieldset>";
+        echo "<label>Nome Pagante</label>";
+        echo "<input type=\"hidden\" name=\"nomeItem1\" value=\"" . $id . "\"/>";
+        echo "<input type=\"hidden\" name=\"turma\" value=\"" . $turma . "\"/>";
+        echo "<input type=\"text\" name=\"\" value=\"" . UTF8_encode($txt1) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>CPF</label>";
+        echo "<input type=\"text\" name=\"\" value=\"" . UTF8_encode($txt2) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Curso</label>";
+        echo "<input type=\"text\" name=\"\" value=\"" . UTF8_encode($txt3) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Data Início</label>";
+        echo "<input type=\"text\" name=\"\" value=\"" . implode('/', array_reverse(explode('-', utf8_decode($txt4)))) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Data Fim</label>";
+        echo "<input type=\"text\" name=\"\" value=\"" . implode('/', array_reverse(explode('-', utf8_decode($txt5)))) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Data Pagamento</label>";
+        echo "<input type=\"text\" name=\"nomeItem2\" onkeypress=\"formatacao(this, '##/##/####')\"  maxlength=\"10\" value=\"" . implode('/', array_reverse(explode('-', utf8_encode($dn)))) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Valor</label>";
+        echo "<input type=\"text\" name=\"nomeItem3\" onkeypress=\"return(MascaraMoeda(this,'','.',event))\" value=\"" . UTF8_encode($pagamentos['pagamentos_email']) . "\"/>";
+        echo "</fieldset>";
+
+        echo "<fieldset>";
+        echo "<label>Nº Parcelas</label>";
+        echo "<input type=\"text\" name=\"nomeItem4\" value=\"" . UTF8_encode($pf) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Dia Vencimento</label>";
+        echo "<input type=\"text\" name=\"nomeItem5\" maxlength=\"2\" value=\"" . implode('/', array_reverse(explode('-', utf8_encode($dn)))) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Meio de Pagamento</label>";
+        echo "<input type=\"text\" name=\"nomeItem6\" value=\"" . UTF8_encode($nat) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Descr. Pagamento</label>";
+        echo "<input type=\"text\" name=\"nomeItem7\" value=\"" . UTF8_encode($nat) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Doc. Pagamento</label>";
+        echo "<input type=\"text\" name=\"nomeItem8\" value=\"" . UTF8_encode($nat) . "\"/>";
+        echo "</fieldset>";
+        
+        echo $fim_listar = <<<fim_listar
+				</div>
+						<footer>
+						<div class="submit_link">
+							<input type="submit" name="alterar" value="Alterar" class="alt_btn"/>
+						</div>
+					</footer>
+				</form>
+			</div>
+		</article><!-- end of post new article -->
+fim_listar;
+    }
+    
+    public function buscar_matric_pagamento($codigoIten, $turma){
+        $stmt = $this->db->prepare('SELECT * FROM curso LEFT JOIN turmas ON curso_idcurso = idcurso LEFT JOIN matriculas ON turmas_idturmas = idturmas LEFT JOIN pessoa ON pessoa_idpessoa = idpessoa LEFT JOIN pagamentos ON zero = zero WHERE zero = ?');
+        $stmt->bindValue(1, $codigoIten);
+        $stmt->execute();
+        $stmt->bindColumn('zero', $id);
+        $stmt->bindColumn('zero', $idpay);
+        $stmt->bindColumn('um', $txt1);
+        $stmt->bindColumn('dois', $txt2);
+        $stmt->bindColumn('tres', $txt3);
+        $stmt->bindColumn('quatro', $txt4);
+        $stmt->bindColumn('cinco', $txt5);
+        $stmt->bindColumn('um', $txt6);
+        $stmt->bindColumn('dois', $txt7);
+        $stmt->bindColumn('tres', $txt8);
+        $stmt->bindColumn('quatro', $txt9);
+        $stmt->bindColumn('cinco', $txt10);
+        $stmt->bindColumn('seis', $txt11);
+        $stmt->bindColumn('sete', $txt12);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $pagamentos = $stmt->fetch();
+         echo $ini_listar = <<<ini_listar
+	<div class="clear"></div>
+        <article class="module width_full">
+            <div>
+                <form action="pagamento.php?acao=4" method="post" enctype="multipart/form-data">
+                    <div class="module_content">
+                        <fieldset>
+                            <label>Detalhes do Pagamento</label>
+                        </fieldset>
+ini_listar;
+        echo "<fieldset>";
+        echo "<label>Nome Pagante</label>";
+        echo "<input type=\"hidden\" name=\"nomeItem1\" value=\"" . $id . "\"/>";
+        echo "<input type=\"hidden\" name=\"codigoIten\" value=\"" . $idpay . "\"/>";
+        echo "<input type=\"hidden\" name=\"turma\" value=\"" . $turma . "\"/>";
+        echo "<input type=\"text\" name=\"\" value=\"" . UTF8_encode($txt1) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>CPF</label>";
+        echo "<input type=\"text\" name=\"\" value=\"" . UTF8_encode($txt2) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Curso</label>";
+        echo "<input type=\"text\" name=\"\" value=\"" . UTF8_encode($txt3) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Data Início</label>";
+        echo "<input type=\"text\" name=\"\" value=\"" . implode('/', array_reverse(explode('-', utf8_decode($txt4)))) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Data Fim</label>";
+        echo "<input type=\"text\" name=\"\" value=\"" . implode('/', array_reverse(explode('-', utf8_decode($txt5)))) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Data Pagamento</label>";
+        echo "<input type=\"text\" name=\"nomeItem2\" onkeypress=\"formatacao(this, '##/##/####')\"  maxlength=\"10\" value=\"" . implode('/', array_reverse(explode('-', utf8_encode($txt6)))) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Valor</label>";
+        echo "<input type=\"text\" name=\"nomeItem3\" onkeypress=\"return(MascaraMoeda(this,'','.',event))\" value=\"" . UTF8_encode($txt7) . "\"/>";
+        echo "</fieldset>";
+
+        echo "<fieldset>";
+        echo "<label>Nº Parcelas</label>";
+        echo "<input type=\"text\" name=\"nomeItem4\" value=\"" . UTF8_encode($txt8) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Dia Vencimento</label>";
+        echo "<input type=\"text\" name=\"nomeItem5\" maxlength=\"2\" value=\"" .utf8_encode($txt9) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Meio de Pagamento</label>";
+        echo "<input type=\"text\" name=\"nomeItem6\" value=\"" . UTF8_encode($txt10) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Descr. Pagamento</label>";
+        echo "<input type=\"text\" name=\"nomeItem7\" value=\"" . UTF8_encode($txt11) . "\"/>";
+        echo "</fieldset>";
+        
+        echo "<fieldset>";
+        echo "<label>Doc. Pagamento</label>";
+        echo "<input type=\"text\" name=\"nomeItem8\" value=\"" . UTF8_encode($txt12) . "\"/>";
+        echo "</fieldset>";
+
+        echo "<fieldset>";
+        echo "<label>Exclusão de Pagamento</label>";
+        echo "<a id\"edicao\" href=\"principal.php?pag=pagamento.php&acao=3&chave=".$idpay."&turma=".$turma."\">   <input type=\"button\" class=\"button\" name=\"cadastrar\" value=\"Excluir Pagamento\" class=\"alt_btn\"> </a>";
+        echo "</fieldset>";
+        
+        echo $fim_listar = <<<fim_listar
+				</div>
+						<footer>
+						<div class="submit_link">
+							<input type="submit" name="alterar" value="Alterar" class="alt_btn"/>
+						</div>
+					</footer>
+				</form>
+			</div>
+		</article><!-- end of post new article -->
+fim_listar;
+    }
+
+    public function alterarPagamento()
+    {
+        /* 	$queryUser =	"SELECT *, n.descricaoNivel
+          FROM nomeItem3s u, niveis n
+          WHERE u.codigoNivel = n.codigoNivel
+          AND u.nomeUsuario ='" . $this->getNomeItem3() . "';";
+
+          //echo $queryUser;
+
+          $resUser = mysql_query($queryUser);
+
+          $row = mysql_num_rows($resUser);
+
+          // Tirando o while
+          $user = mysql_fetch_array($resUser);
+
+          if (  $user['codigoNivel']== 2){ //rotina a ser executada ap�s aprovado o if
+          header('location: principal.php?pag=notPermission.php');
+          }else{ */ // altera o valor dos atributos da area no banco atraves de sql embutido
+        try {
+            /*echo $sql_debug = "UPDATE pagamentos SET	um         = ".$this->getNomeItem1().",
+					dois          = ".$this->getNomeItem2().",
+					pagamentos_email        = ".$this->getNomeItem3().",
+					tres           = ".$this->getNomeItem4().",
+					pagamentos_prof         = ".$this->getNomeItem5().",
+					pagamentos_natural      = ".$this->getNomeItem3()."
+				WHERE zero            = ".$this->getcodigoIten().",";*/
+    //echo    $sql = "UPDATE pagamentos SET zero=".$this->nomeItem1.",um=".$this->nomeItem2.",dois=".$this->nomeItem3.",tres=".$this->nomeItem4.",quatro=".$this->nomeItem5.",cinco=".$this->nomeItem6.",seis=".$this->nomeItem7.",sete=".$this->nomeItem8." WHERE zero = ".$this->codigoIten."";
+            $sql = "UPDATE pagamentos SET zero=?,um=?,dois=?,tres=?,quatro=?,cinco=?,seis=?,sete=? WHERE zero = ?";
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindValue(1, $this->getNomeItem1());
+            $stmt->bindValue(2, $this->getNomeItem2());
+            $stmt->bindValue(3, $this->getNomeItem3());
+            $stmt->bindValue(4, $this->getNomeItem4());
+            $stmt->bindValue(5, $this->getNomeItem5());
+            $stmt->bindValue(6, $this->getNomeItem6());
+            $stmt->bindValue(7, $this->getNomeItem7());
+            $stmt->bindValue(8, $this->getNomeItem8());
+            $stmt->bindValue(9, $this->getcodigoIten());
+            //echo $stmt->queryString;
+            $stmt->execute();
+           // $stmt->debugDumpParams();
+        } catch (PDOException $e) {
+           $stmt->rollBack();
+            throw $e;
+        }
+        //mysql_query($query) or die(mysql_error());
+        /* } */
+    }
+
+    public function listarDadosPagamento($id)
+    {
+
+    }
+
+    public function listarFonesPagamento($fone)
+    {
+        $query = "SELECT *
+		FROM Pagamentoes c, Telefones t
+		WHERE idPagamentoes = " . $fone .
+                " AND c.idPagamentoes = t.Pagamentoes_idPagamentoes";
+        echo $ini_listar = <<<ini_listar
+	<div class="clear"></div>
+		<article class="module width_full">
+			<div>
+				<form action="fones-p.php" method="post" enctype="multipart/form-data">
+					<div class="module_content">
+						<fieldset>
+							<label>Pagamento</label>
+
+						</fieldset>
+ini_listar;
+
+        $res = mysql_query($query) or die(mysql_error());
+        $nr = (int) mysql_num_rows($res);
+        if ($nr)
+        {
+            $indice = 1;
+            while ($array = mysql_fetch_array($res))
+            { //while($array = mysql_fetch_array  -  pega todo result set
+                if ($indice == 1)
+                {
+
+                    echo "<fieldset>";
+                    echo "<label>Nome Pagamento</label>";
+                    echo "<input type=\"hidden\" name=\"codigoIten\" value=\"" . UTF8_encode($array['idPagamentoes']) . "\"/>";
+                    echo "<input type=\"text\" name=\"nomeItem1\" value=\"" . UTF8_encode($array['PagamentoesNome']) . "\"/>";
+                    echo "</fieldset>";
+                    echo "<fieldset>";
+                    echo "<label>CRECI</label>";
+                    echo "<input type=\"text\" name=\"nomeItem2\" value=\"" . UTF8_encode($array['PagamentoesCreci']) . "\"/>";
+                    echo "</fieldset>";
+                    echo "<fieldset>";
+                    echo "<label>Inserir Telefone</label>";
+                    echo "<input type=\"text\" name=\"nomeItem3\" value=\"\"/>";
+                    echo "</fieldset>";
+                }
+                if ($indice == 1)
+                {
+                    echo "<fieldset>";
+                    echo "<label>Fones Cadastrados</label>";
+                    echo "</fieldset>";
+                }
+                echo "<fieldset>";
+                echo "<label>Fone " . $indice . "</label>";
+                echo "<input type=\"text\" name=\"\" value=\"" . UTF8_encode($array['TelefonesNumero']) . "\"/>";
+                echo "</fieldset>";
+
+                $indice++;
+            }
+        }
+        else
+        {
+            $query = "SELECT *
+		FROM Pagamentoes c
+		WHERE idPagamentoes = " . $fone;
+
+            $res = mysql_query($query);
+            $gal = mysql_fetch_array($res);
+            echo "<fieldset>";
+            echo "<label>Nome Pagamento</label>";
+            echo "<input type=\"hidden\" name=\"codigoIten\" value=\"" . $gal['idPagamentoes'] . "\"/>";
+            echo "<input type=\"text\" name=\"nomeItem1\" value=\"" . UTF8_encode($gal['PagamentoesNome']) . "\"/>";
+            echo "</fieldset>";
+            echo "<fieldset>";
+            echo "<label>CRECI</label>";
+            echo "<input type=\"text\" name=\"nomeItem2\" value=\"" . UTF8_encode($gal['PagamentoesCreci']) . "\"/>";
+            echo "</fieldset>";
+            echo "<fieldset>";
+            echo "<label>Fone</label>";
+            echo "<input type=\"text\" name=\"nomeItem3\" value=\"\"/>";
+            echo "</fieldset>";
+        }
+
+        echo $fim_listar = <<<fim_listar
+				</div>
+						<footer>
+						<div class="submit_link">
+							<input type="button" name="voltar" value="Voltar" onclick="Voltar()" class="alt_btn"/>
+                                                        <input type="submit" name="alterar" value="Salvar" class="alt_btn"/>
+						</div>
+					</footer>
+				</form>
+			</div>
+		</article><!-- end of post new article -->
+fim_listar;
+    }
+    
+     public function inserirPagamentoTel($db, $param, $id, $nm, $cl, $tp, $tb) {
+            //echo 'SELECT * FROM pagamentos WHERE zero = ' . $param;    
+            $stmt = $this->db->prepare('SELECT * FROM pagamentos tb WHERE zero = ?');
+            $stmt->bindValue(1, $param);
+            $stmt->execute();
+            $stmt->bindColumn('zero', $id);
+            $stmt->bindColumn('um', $pn);
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $stmt->fetch();
+            echo $ini_listar =<<<ini_listar
+	<div class="clear"></div>
+		<article class="module width_full">
+			<div>
+				<form action="telefones.php" method="post" >
+					<div class="module_content">
+						<fieldset  id="destaque">
+							<label> Informação de Telefone de Cliente</label>
+
+						</fieldset>
+ini_listar;
+           echo "<fieldset>";                    
+                    echo "<input type=\"hidden\" name=\"tres\" value=\"".UTF8_encode($param). "\"/>";
+           echo "</fieldset>";
+           echo $fim_listar =<<<fim_listar
+                   <fieldset>
+                            <label>Pagamento</label>
+                            <input type="text" id="" name="" size="50" value="$pn" disabled>
+                 </fieldset>
+                 <fieldset>
+                            <label>Edição do Fone</label>
+                            
+                                <input type="text" id="fone" name="dois" size="50" value="" >
+                            <div id="botoes">    
+fim_listar;
+                                $titular = $gal['zero'];
+                                include_once 'telTipe.php';
+echo $fim_listar =<<<fim_listar
+                            <input type="submit" value="Enviar">
+                            </div>
+                   </fieldset>      
+              </form>      
+                       
+fim_listar;
+
+                            
+        }
+     public function inserirPagamentoEnd($param) {
+        $stmt = $this->db->prepare('SELECT * FROM pagamentos WHERE zero = ?');
+        $stmt->bindValue(1, $param);
+        $stmt->execute();
+        $stmt->bindColumn('zero', $id);
+        $stmt->bindColumn('um', $txt1);;
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->fetch();
+            
+echo $ini_listar =<<<ini_listar
+	<div class="clear"></div>
+		<article class="module width_full">
+			<div>
+				<form action="enderecos.php" method="post" >
+					<div class="module_content">
+						<fieldset  id="destaque">
+							<label> Informação de Endereço de Cliente: $txt1</label>
+						</fieldset>
+ini_listar;
+           echo "<fieldset>";                    
+                    echo "<input type=\"hidden\" name=\"um\" value=\"".UTF8_encode($id). "\"/>";
+           echo "</fieldset>";
+           echo $fim_listar =<<<fim_listar
+                    <fieldset>
+                            <label>Endereço</label>
+                            
+                                <input type="text" id="" name="dois" size="50" value="$gal[$nm]" >
+                   </fieldset>
+fim_listar;
+echo $fim_listar =<<<fim_listar
+                   <fieldset>
+                            <label>Número Predial</label>                          
+                            <input type="text" id="" name="tres" size="50" value="$gal[$nm]" >
+                   </fieldset>                                   
+fim_listar;
+echo $fim_listar =<<<fim_listar
+                   <fieldset>
+                            <label>Complemento</label>
+                            <input type="text" id="" name="quatro" size="50" value="$gal[$nm]" >
+                   </fieldset>                                   
+fim_listar;
+echo $fim_listar =<<<fim_listar
+                   <fieldset>
+                            <label>Bairro</label>
+                            <input type="text" id="" name="cinco" size="50" value="$gal[$nm]" >
+                   </fieldset>                                   
+fim_listar;
+echo $fim_listar =<<<fim_listar
+                   <fieldset>
+                            <label>CEP</label>
+                            <input type="text" id="" name="nove" size="50" value="$gal[$nm]" >
+                   </fieldset>                                   
+fim_listar;
+echo $fim_listar =<<<fim_listar
+                   <fieldset>
+                            <div id="botoes">    
+fim_listar;
+                                $titular = $gal['zero'];
+                                include './inc/inc.endereçoTipe.php';
+                                include './inc/inc.cidade.php';
+echo $fim_listar =<<<fim_listar
+                            <input type="submit" value="Enviar">
+                            </div>
+                   </fieldset>      
+              </form>                             
+fim_listar;
+
+                            
+        }
+        
+        
+    public function listarPagamentoTel($param, $id, $nm, $cl, $tp, $tb, $tb2, $tb_id, $tb2_id) {
+     //executa consulta no banco de dados para montar a exibição da consulta.
+        $stmt = $this->db->prepare('SELECT * FROM telefone cl, tipo_tel tt WHERE idtelefone = ? AND cl.tipo_tel_idtipo_tel = tt.idtipo_tel');
+        $stmt->bindValue(1, $param);
+        $stmt->execute();
+        $stmt->bindColumn('idtelefone', $id);
+        $stmt->bindColumn('telefone_numero', $tn);
+        $stmt->bindColumn('pagamentos_zero', $pid);
+        $stmt->bindColumn('tipo_tel_idtipo_tel', $tptel);
+        $stmt->bindColumn('tipo_tel_desc', $ttd);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->fetch();
+        require_once 'selectFoneCli.php'; 
+        echo $ini_listar =<<<ini_listar
+	<div class="clear"></div>
+		<article class="module width_full">
+			<div>
+				<form action="telefones.php?acao=3" method="post" >
+					<div class="module_content">
+						<fieldset  id="destaque">
+							<label> Informação de Telefone de Cliente</label>
+
+						</fieldset>
+ini_listar;
+           echo "<fieldset>";
+                    
+                    echo "<input type=\"hidden\" name=\"um\" value=\"".UTF8_encode($id). "\"/>";
+                    echo "<input type=\"hidden\" name=\"tres\" value=\"".UTF8_encode($pid). "\"/>";
+        
+           echo "</fieldset>";
+            echo $fim_listar =<<<fim_listar
+                   <fieldset>
+                            <label>Edição do Fone</label>
+                            
+                                <input type="text" id="fone" name="dois" size="50" value="$tn" >
+                            <div id="botoes">    
+fim_listar;
+                                $titular = $pid;
+                                include_once 'telTipe.php';
+echo $fim_listar =<<<fim_listar
+                            <input type="submit" value="Enviar">
+                            </div>
+                   </fieldset>      
+              </form>      
+                       
+fim_listar;
+          
+        }
+
+}//put your code here
+}
