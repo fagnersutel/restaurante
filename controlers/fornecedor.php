@@ -26,7 +26,7 @@ switch ($acao){
         } catch (Exception $exc) {
             header('location: principal.php?pag=falha.php&erro='.$exc->getTraceAsString());
         } 
-        header('location: fornecedores.php?acao=2&chave='.$inserido.'');
+        header('location: fornecedores.php?acao=2                                                   &chave='.$inserido.'');
         
         break;
     
